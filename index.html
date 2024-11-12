@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <!-- CDN Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8bbebe91;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #688eb4;
+            padding: 30px;
+        }
+
+        .navbar .navbar-brand {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #cce0ff;
+        }
+
+        .navbar .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        /* Hero Section Styles */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            width: 220px;
+            padding: 15px;
+            margin: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .start-btn {
+            background-color: #84a9cfd8;
+            color: rgb(219, 205, 205);
+            cursor: not-allowed;
+            /* Start button disabled style */
+        }
+
+        .start-btn:disabled {
+            background-color: #cf7373;
+            /* Gray color for disabled */
+        }
+
+        .login-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Card Section */
+        .card-deck .card {
+            margin-bottom: 20px;
+        }
+
+        /* Services Section Styles */
+        .services {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .services h3 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services .service-item {
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            /* background-color: #99d7df; */
+            background-color: #c2e2e291;
+            /* padding: 30%; */
+            padding-left: 30%;
+            padding-right: 30%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact .box {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .contact .box:focus {
+            border-color: #84a9cfd8;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #688eb4;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer .box-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer .box {
+            width: 200px;
+        }
+
+        .footer .box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .footer .box a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        .footer .box a:hover {
+            color: #cce0ff;
+        }
+
+        .footer .credit {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SkillCheck</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Main Content Section -->
+    <div class="container mt-5">
+        <div>
+            <h1>Welcome to SkillCheck</h1>
+            <form action="http://localhost/testonline/login.html" method="get" class="login-form">
+                <input type="hidden" name="op" value="null">
+                <input type="hidden" name="answerkey" value="">
+                <input type="hidden" name="qid" value="0">
+                <input type="hidden" name="marks" value="0">
+                <div class="button-container">
+                    <input type="submit" value="Start" name="btn" disabled class="btn start-btn">
+                    <input type="submit" value="Login" name="event" class="btn login-btn">
+                </div>
+            </form>
+        </div>
+        <div class="image">
+            <img src="img/hero-bg.jpeg" alt="Description of image">
+        </div>
+    </div>
+
+    <!-- Card Section -->
+
+    <h1>Services</h1>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/services1.jfif" class="card-img-top" alt="Card Image 1">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit
+                            maiores illum incidunt ullam vel aspernatur, quis amet molestias nemo magni non sapiente
+                            nisi corporis, odit delectus eos hic. Odio!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/services2.jfif" class="card-img-top" alt="Card Image 2">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat incidunt
+                            vero amet, accusantium aliquid eaque optio harum eius veniam consequuntur recusandae hic
+                            dolorem natus fugiat corporis minima </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/services3.jfif" class="card-img-top" alt="Card Image 3">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad accusantium
+                            odio minima repellendus eum iure veritatis corrupti iste! Cumque assumenda aliquam quam
+                            incidunt facilis quas soluta id !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h3>Send Us a Message</h3>
+        <form action="" method="POST">
+            <input type="text" name="name" placeholder="Enter your name" class="box" required>
+            <input type="email" name="email" placeholder="Enter your email" class="box" required>
+            <input type="number" name="number" placeholder="Enter your number" class="box" required>
+            <textarea name="message" class="box" placeholder="Enter your message" required cols="30"
+                rows="10"></textarea>
+            <input type="submit" value="Send Message" name="send" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="home.php">Home</a>
+                <a href="contact.php">Contact</a>
+            </div>
+            <div class="box">
+                <h3>Extra Links</h3>
+                <a href="login.php">Login</a>
+                <a href="register.php">Register</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +111-222-3333</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mumbai, India - 123-456</p>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="credit">© Copyright @
+            <?php echo date('Y'); ?> by <span>Mrs. Web Designer</span>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
